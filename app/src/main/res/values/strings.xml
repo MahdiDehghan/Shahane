@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Shahane</string>
     <string name="title_activity_maps">Map</string>
+    <string name="notification">Map</string>
+    <string name="menu">Map</string>
+    <string name="addPerson">Map</string>
 </resources>
