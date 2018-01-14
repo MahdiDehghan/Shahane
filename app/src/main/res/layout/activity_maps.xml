@@ -44,7 +44,8 @@
             android:layout_alignTop="@+id/view"
             android:layout_centerHorizontal="true"
             android:id="@+id/imageButton"
-            android:contentDescription="@string/add_person"/>
+            android:contentDescription="@string/add_person"
+            android:onClick="AddPerson"/>
 
 
         <ImageButton

@@ -37,6 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:drawableStart="@drawable/ic_lock"
+            android:inputType="textPassword"
+            android:gravity="end|center"
             android:hint="@string/password_hint" />
 
         <Button

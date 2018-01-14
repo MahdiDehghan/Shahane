@@ -1,5 +1,6 @@
 package com.example.mahya.shahane;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
@@ -8,6 +9,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -49,7 +53,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
     }
-
+    public void AddPerson(View v){
+        int i=0;
+        Intent loginPg=new Intent(this,LoginPageActivity.class);
+        startActivityForResult(loginPg,i);
+    }
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -69,9 +77,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             if (!success) {
                 //Log.e(TAG, "Style parsing failed.");
+                Toast.makeText(this, "Style parsing failed.", Toast.LENGTH_SHORT).show();
             }
         } catch (Resources.NotFoundException e) {
             //Log.e(TAG, "Can't find style. Error: ", e);
+            Toast.makeText(this, "Can't find style. Error:", Toast.LENGTH_SHORT).show();
         }
         // Add a marker in Sydney and move the camera
 
