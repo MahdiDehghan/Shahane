@@ -1,11 +1,23 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <!-- EditText style -->
+    <style name="editTextStyle" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:background">@drawable/textbx</item>
+    </style>
+    <!-- TextView style as a link-->
+    <style name="linkStyle">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textColor">@color/colorLinks</item>
+    </style>
 </resources>

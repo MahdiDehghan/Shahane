@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Shahane</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="notification">Map</string>
-    <string name="menu">Map</string>
-    <string name="addPerson">Map</string>
+    <string name="title_activity_maps">شاهانه</string>
+    <string name="notification">اعلان ها</string>
+    <string name="menu">منو</string>
+    <string name="add_person">افزودن</string>
+    <string name="email_hint">رایانامه</string>
+    <string name="password_hint">کلمه عبور</string>
+    <string name="signin_button">ورود</string>
+    <string name="register_link">هنوز عضو نشده اید؟</string>
+    <string name="logo">لوگو</string>
 </resources>
