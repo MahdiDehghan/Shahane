@@ -9,8 +9,11 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -34,7 +37,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private Location mLastLocation;
 
-
+    private DrawerLayout drawerLayout;
+    //private Button navMenuButon,addLocationButon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,13 +55,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .addApi(LocationServices.API)
                     .build();
         }
+//------------------------------ Navigation Menu --------------------------------
+        drawerLayout = (DrawerLayout) findViewById(R.id.my_drawer);
+        ImageView navMenuButton = (ImageView) findViewById(R.id.mnu);
+        navMenuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(Gravity.END);
+            }
+        });
+//------------------------------ Add Location --------------------------------
+        ImageView addLocationButton = (ImageView) findViewById(R.id.addLoc);
+        addLocationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int i=0;
+                Intent loginPg=new Intent(getApplicationContext(), LoginPageActivity.class);
+                startActivityForResult(loginPg,i);
+            }
+        });
+    }
 
-    }
-    public void AddPerson(View v){
-        int i=0;
-        Intent loginPg=new Intent(this,LoginPageActivity.class);
-        startActivityForResult(loginPg,i);
-    }
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.

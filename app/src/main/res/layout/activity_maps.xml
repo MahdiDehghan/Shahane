@@ -1,64 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainpg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_drawer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/map"
-        tools:context=".MapsActivity"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        android:layout_height="match_parent">
 
-    <RelativeLayout android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-        <RelativeLayout
-            android:layout_height="80dp"
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:background="@drawable/mainpgbx"
-            android:gravity="bottom"
-            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            tools:context=".MapsActivity" />
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navmnu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:headerLayout="@layout/navigation_menu_header"
+            android:background="@color/colorMenuBackground"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            app:menu="@menu/main"
+            app:itemBackground="@drawable/menubg"
+            android:layoutDirection="rtl">
+        </android.support.design.widget.NavigationView>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mainpag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-            android:id="@+id/view"
-            android:layout_margin="5dp">
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="15dp"
+                android:background="@drawable/mainpgbx"
+                android:gravity="bottom"> </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/mnu"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignBottom="@+id/addLoc"
+                android:layout_marginStart="50dp"
+                android:layout_toEndOf="@+id/addLoc"
+                android:background="@null"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="@string/nothing"/>
+
+            <ImageButton
+                android:id="@+id/addLoc"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/view"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/mainpgbx"
+                android:contentDescription="@string/nothing"/>
+
+            <ImageButton
+                android:id="@+id/notif"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignBottom="@+id/addLoc"
+                android:layout_marginEnd="50dp"
+                android:layout_toStartOf="@+id/addLoc"
+                android:background="@null"
+                android:src="@drawable/ic_notifications"
+                android:contentDescription="@string/nothing"/>
+
         </RelativeLayout>
 
-        <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="50dp"
-            android:layout_alignBottom="@+id/imageButton"
-            android:layout_toEndOf="@+id/imageButton"
-            android:id="@+id/imageButton3"
-            android:src="@drawable/ic_menu"
-            android:background="@null"
-            android:contentDescription="@string/menu"/>
-
-        <ImageButton
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/mainpgbx"
-            android:layout_alignTop="@+id/view"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/imageButton"
-            android:contentDescription="@string/add_person"
-            android:onClick="AddPerson"/>
-
-
-        <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:id="@+id/imageButton4"
-            android:layout_marginEnd="50dp"
-            android:layout_alignBottom="@+id/imageButton"
-            android:layout_toStartOf="@+id/imageButton"
-            android:src="@drawable/ic_notifications"
-            android:background="@null"
-            android:contentDescription="@string/notification"/>
-
-    </RelativeLayout>
-
+    </android.support.v4.widget.DrawerLayout>
 </RelativeLayout>
+
+
+
+
+

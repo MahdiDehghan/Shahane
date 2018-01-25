@@ -9,4 +9,11 @@
     <string name="signin_button">ورود</string>
     <string name="register_link">هنوز عضو نشده اید؟</string>
     <string name="logo">لوگو</string>
+    <string name="login_logout">ورود یا ثبت نام</string>
+    <string name="add_new_item">افزودن موقعیت جدید</string>
+    <string name="products">منوی غذا</string>
+    <string name="add_notification">اعلانات</string>
+    <string name="contact_us">تماس با ما</string>
+    <string name="about_us">درباره ما</string>
+    <string name="nothing"> </string>
 </resources>

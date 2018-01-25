@@ -3,7 +3,9 @@
     <color name="colorPrimary">#4FC1E8</color>
     <color name="colorPrimaryDark">#3BAFDA</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorMenuBackground">#FFFFFF</color>
+    <color name="colorCmdBackground">#F5F5F5</color>
+    <color name="colorMenuBackground">#F5F5F5</color>
+    <color name="colorMenuBorder">#FFFFFF</color>
     <color name="colorFormPageBackground">#E7ECEF</color>
     <color name="colorTextBox">#FFFFFF</color>
     <color name="colorLinks">#42B8DE</color>
