@@ -50,7 +50,7 @@
                 android:background="@drawable/mainpgbx"
                 android:gravity="bottom"> </RelativeLayout>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/mnu"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
@@ -61,7 +61,7 @@
                 android:src="@drawable/ic_menu"
                 android:contentDescription="@string/nothing"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/addLoc"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -70,7 +70,7 @@
                 android:background="@drawable/mainpgbx"
                 android:contentDescription="@string/nothing"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/notif"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
