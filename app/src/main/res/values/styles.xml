@@ -9,7 +9,7 @@
     </style>
     <!-- EditText style -->
     <style name="editTextStyle" parent="@style/Widget.AppCompat.EditText">
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginTop">15dp</item>
         <item name="android:drawablePadding">20dp</item>
         <item name="android:paddingEnd">15dp</item>
         <item name="android:paddingStart">15dp</item>

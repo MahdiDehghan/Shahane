@@ -9,13 +9,4 @@
             <solid android:color="@color/colorMenuBackground" />
         </shape>
     </item>
-
-    <item android:id="@+id/circle"
-        android:width="70dp"
-        android:height="70dp"
-        android:gravity="top|center">
-        <shape android:shape="oval">
-            <solid android:color="@color/colorPrimaryDark" />
-        </shape>
-    </item>
 </layer-list>

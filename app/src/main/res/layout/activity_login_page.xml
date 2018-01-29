@@ -1,32 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorFormPageBackground"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:padding="10dp"
-        android:src="@drawable/point"
-        android:contentDescription="@string/logo"/>
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="110dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/logo"
+            android:padding="10dp"
+            android:src="@drawable/point" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_fa_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="35sp"
+            android:layout_marginTop="-10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="-18dp"
+            android:layout_marginStart="12dp"
+            android:textSize="15sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layoutInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="300dp"
         android:orientation="vertical"
         android:padding="20dp">
 
         <EditText
+            android:id="@+id/user"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableStart="@drawable/ic_user"
+            android:hint="@string/username"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:inputType="textEmailAddress"
             style="@style/editTextStyle"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -34,13 +70,14 @@
             android:hint="@string/email_hint" />
 
         <EditText
+            android:id="@+id/pass"
             style="@style/editTextStyle"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:drawableStart="@drawable/ic_lock"
-            android:inputType="textPassword"
             android:gravity="end|center"
-            android:hint="@string/password_hint" />
+            android:hint="@string/password_hint"
+            android:inputType="textPassword" />
 
         <Button
             android:layout_width="match_parent"
@@ -50,11 +87,12 @@
             android:text="@string/signin_button" />
 
         <TextView
+            android:id="@+id/signuplink"
+            style="@style/linkStyle"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:gravity="center"
-            android:text="@string/register_link"
-            style="@style/linkStyle" />
+            android:text="@string/signup_link" />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

@@ -9,4 +9,5 @@
     <color name="colorFormPageBackground">#E7ECEF</color>
     <color name="colorTextBox">#FFFFFF</color>
     <color name="colorLinks">#42B8DE</color>
+    <color name="colorText">#858585</color>
 </resources>

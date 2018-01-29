@@ -67,7 +67,7 @@
                 android:layout_height="70dp"
                 android:layout_alignTop="@+id/view"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/mainpgbx"
+                android:background="@drawable/maincircle"
                 android:contentDescription="@string/nothing"/>
 
             <ImageButton
