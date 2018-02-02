@@ -68,7 +68,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         addLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int i=0;
+                int i=1;
+                i=0;
                 Intent loginPg=new Intent(getApplicationContext(), LoginPageActivity.class);
                 startActivityForResult(loginPg,i);
             }
