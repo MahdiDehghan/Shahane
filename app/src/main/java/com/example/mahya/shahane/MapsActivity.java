@@ -35,7 +35,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleApiClient mGoogleApiClient;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private Location mLastLocation;
-    private String test;
+    private String test1;
     private DrawerLayout drawerLayout;
 
     @Override
@@ -68,8 +68,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         addLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int i=1;
-                i=0;
+                int i=0;
                 Intent loginPg=new Intent(getApplicationContext(), LoginPageActivity.class);
                 startActivityForResult(loginPg,i);
             }
