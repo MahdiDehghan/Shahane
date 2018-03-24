@@ -35,7 +35,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleApiClient mGoogleApiClient;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private Location mLastLocation;
-
+    private String test;
     private DrawerLayout drawerLayout;
 
     @Override
